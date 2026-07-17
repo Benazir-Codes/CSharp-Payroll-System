@@ -8,6 +8,11 @@ This repo contains all my daily practice code.
 
 ## What I Learned
 - Day 01: Variables & Print
+** Output: **
+My name is Benazir
+My age is 32
+My city is Tirunelveli 
+
 
 ## How to Run
 1. Open in .NET Fiddle or Visual Studio
