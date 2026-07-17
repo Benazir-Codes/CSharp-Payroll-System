@@ -1,0 +1,32 @@
+using System;
+
+public class Program
+{
+	public static void Main()
+		
+	{
+		string name = "Benazir";
+		int age = 32;
+		string city = "Tirunelveli";
+		Console.WriteLine("Day 2 ---- if else condition");
+			if (age >= 18)
+			{
+				Console.WriteLine("Hi " + name + "you are an adult");
+			}
+        else
+        {
+            Console.WriteLine("Hi " + name + ", you are a Minor.");
+        }
+        
+        Console.WriteLine("\n--- For Loop Example ---");
+        
+        // For Loop - Print 5 times
+        for (int i = 1; i <= 5; i++)
+        {
+            Console.WriteLine(i + ". I am from " + city + " and I am learning C#");
+        }
+        
+        Console.WriteLine("\nDay 2 Complete!");
+    }
+}
+		
