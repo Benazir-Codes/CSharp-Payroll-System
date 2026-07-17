@@ -14,3 +14,10 @@ public class Program
 	}
 }
 						  
+
+/*
+OUTPUT:
+My name is Benazir
+My age is 32
+My city is Tirunelveli
+*/
