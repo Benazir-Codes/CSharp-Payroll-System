@@ -10,8 +10,11 @@ This repo contains all my daily practice code.
 - Day 01: Variables & Print
   
 **Output:**
+
 My name is Benazir
+
 My age is 32
+
 My city is Tirunelveli 
 
 
