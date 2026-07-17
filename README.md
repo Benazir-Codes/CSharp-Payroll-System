@@ -8,6 +8,7 @@ This repo contains all my daily practice code.
 
 ## What I Learned
 - Day 01: Variables & Print
+  
 **Output:**
 My name is Benazir
 My age is 32
