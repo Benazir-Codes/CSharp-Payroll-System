@@ -1,0 +1,109 @@
+using System;
+					
+public class Employee 
+{
+	private double salary;
+	private double bonus;
+	private string name;
+	private static int age;
+	public static int totalemployees;
+	
+	public string Name
+	{
+		get { return name ;}
+		set {
+			name = value;
+		}
+	}
+	
+	public double Salary
+	{
+		get { return salary ;}
+		set {
+			if( value >= 0){
+			salary = value;
+			}
+			else
+			{
+				Console.WriteLine("Salary cannot be Negative");
+			}
+		}
+	}
+	
+	public double Bonus 
+	{
+		get {
+			return bonus;
+		}
+	private	set
+		{
+			bonus = value ;
+	}
+	}
+	
+	public int Age
+	{
+		get { return age; }
+		set {
+			if (age >= 18)
+			{
+				age = value;
+			
+			}
+			else {
+				Console.WriteLine("Age should be greater than 18");
+			}
+		}
+		}
+		
+	 public Employee()
+	 {
+		 totalemployees++;
+		 Console.WriteLine("Default constructor called");
+	 }
+	 
+	public Employee(string strName,int strAge,double strBonus)
+	{
+		 Name = strName;
+		 Age = strAge;
+		 Bonus = strBonus;
+		totalemployees++; 
+		Console.WriteLine("Parameterized constructor called");
+	}
+	public void CalculateBonus(double percentage)
+	{
+	Bonus =	Salary * (percentage/100);
+	}
+	
+	public double Calculatetax()
+	{
+		return Bonus * 0.18;
+	}
+	
+	public double Calculatenetsalary()
+	{
+		return Bonus + Salary - Calculatetax();
+	}
+	
+	public static void Main()
+	{
+		Console.WriteLine("Day 9 oop Encapsulation finished ");
+		
+		Employee emp01 = new Employee();
+		emp01.Salary = 5000;
+		emp01.Name = "Azrin";
+		emp01.Salary = -1000;
+		emp01.Age = 25;
+		emp01.Age = 12;
+		
+		Employee emp02 = new Employee("Inaya",20,60000);
+		
+		
+		emp01.CalculateBonus(20);
+		emp02.CalculateBonus(50);
+		
+		Console.WriteLine(emp01.Name + " Net : $ " + emp01.Calculatenetsalary());
+		Console.WriteLine(emp02.Name + " Net : $ " + emp02.Calculatenetsalary());
+		Console.WriteLine("Total Employees " + Employee.totalemployees);
+	}
+}
