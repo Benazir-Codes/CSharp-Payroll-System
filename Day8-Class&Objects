@@ -1,0 +1,50 @@
+using System;
+					
+public class Employee 
+{
+	public double bonus;
+	public double salary;
+	public string name;
+	public static int totalemployees = 0;
+	
+	public Employee()
+	{
+		totalemployees ++;
+	}
+	
+	
+	public double Calculatebonus(double percentage)
+	{ 
+		double bonus = salary * (percentage/100);
+	    return bonus;
+	}
+	public double Calculatetax(double salary)
+    {
+		double tax=salary * 0.18;
+		return tax;
+    }
+	public double Calculatenetsalary()
+	{
+		double tax = Calculatetax(salary);
+		double netsalary = salary + bonus - tax;
+		return netsalary;
+	}
+
+    public static void Main()
+    {
+        Console.WriteLine("Day 8 OOP - Rayyan's Company");
+        
+        Employee emp01 = new Employee();
+        emp01.name = "Rayyan";
+        emp01.salary = 50000;
+        
+		
+		
+        emp01.Calculatebonus(10);
+        Console.WriteLine(emp01.name + " Net: $" + emp01.Calculatenetsalary());
+		Console.WriteLine("Total Employees" + Employee.totalemployees);
+	  }
+
+		 
+}
+					  
