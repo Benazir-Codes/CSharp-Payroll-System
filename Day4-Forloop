@@ -1,0 +1,18 @@
+using System;
+
+public static class Program
+{
+	public static void Main()
+	{
+		Console.WriteLine("For loop start here");
+		Console.Write("Enter your Name ");
+		string Name = Console.ReadLine();
+		Console.Write("How many times print ");
+		int count = Convert.ToInt32(Console.ReadLine());
+	    for ( int i = 0; i < count ; i++)
+		{
+			Console.WriteLine( i + " I love coding, well done " + Name + "! Day 4 Done  ");
+		} 
+		Console.WriteLine("Loop Finiished ,Your amazing " + Name );
+		}	
+}
