@@ -1,0 +1,14 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		Console.WriteLine("Day 6 Array learning ");
+		Console.WriteLine("---------------------");
+		
+		int[] EmployeeIds = {101,102,103,104,105,106};
+		
+		bool[] isActive ={ true,true,false,true,false};
+	}
+}
