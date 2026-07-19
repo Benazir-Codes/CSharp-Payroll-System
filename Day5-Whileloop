@@ -1,0 +1,23 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		Console.WriteLine("---Day5 Start whileloop--");
+		string Answer= "";
+		while(Answer != "stop")
+		{
+			Console.Write("Enter Name");
+			Console.WriteLine(Console.ReadLine());
+			if(Answer != "stop")
+			{
+				Console.WriteLine("Hello "+ Answer + "mummy is coding for you");
+			}
+			   
+		}
+		Console.WriteLine("loop is ended");
+		Console.WriteLine("Day 5 complete");
+		
+	}
+}
