@@ -1,0 +1,86 @@
+using System;
+					
+public class Employee
+{
+	public string Name;
+	public double Salary;
+	
+	public Employee(string name,double salary)
+	
+	{
+		Name = name ;
+		Salary = salary ;
+		Console.WriteLine("Constructor Called");
+	}
+	public virtual void showdetails()// virtual override by child class
+	{
+		Console.WriteLine($"Name : {Name} ,Salary : {Salary}");
+	}
+	
+	public virtual double calculatepay()
+	{
+		return Salary;
+	}
+	}
+	//Child class
+	
+	public class Manager : Employee 
+	{
+		public int Teamsize;
+		public double Bonus;
+		public Manager(string name,double salary,int team,double bouns) : base(name, salary)
+		{
+			Teamsize = team;
+			Console.WriteLine("Manager constructor called");
+		}
+		public override void showdetails()
+		{
+			Console.WriteLine($"Manager: {Name} , Salary : {Salary},Team : {Teamsize}");
+		}
+		public override double calculatepay()
+		{
+			return Salary + Bonus;
+		}
+	}
+	
+	public class Developer : Employee
+	{
+		public string language;
+		public int overtimehours;
+		public Developer(string name,double salary,string lang,int ot) : base(name,salary)
+		{
+			language = lang;
+			overtimehours= ot;
+			Console.WriteLine("Developer Constructor Called");
+		}
+		public override void showdetails()
+		{
+			Console.WriteLine($"Developer: { Name} , Salary: {Salary}, language: {language}");
+        }
+		public override double calculatepay()
+		{
+			double otpay= overtimehours * 500;
+			return Salary + otpay;
+		}
+	}
+	
+	public class program
+	{
+	
+	public static void Main()
+    {
+		Console.WriteLine("Payroll system");
+		Manager m1 = new Manager("Rayyan",50000,5,500);
+		Developer d1 = new Developer("Azrin",25000,"C#",2);
+		
+		m1.showdetails();
+		Console.WriteLine($"Final pay : Rs.{m1.calculatepay()}\n");
+		d1.showdetails();
+		Console.WriteLine($"Final pay : Rs.{d1.calculatepay()}\n");
+			
+	}
+		
+		
+		
+		
+						  }
