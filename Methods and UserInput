@@ -1,0 +1,37 @@
+using System;
+
+public class Program
+{
+    // This is a METHOD - reusable code block
+    public static void ShowDetails(string name, int age, string city)
+    {
+        Console.WriteLine("\n=== Your Details ===");
+        Console.WriteLine("Name: " + name);
+        Console.WriteLine("Age: " + age);
+        Console.WriteLine("City: " + city);
+        
+        if (age >= 18)
+        {
+            Console.WriteLine("Status: You are an Adult");
+        }
+        else
+        {
+            Console.WriteLine("Status: You are a Minor");
+        }
+        
+        int ageAfter10years = age +10;
+		Console.WriteLine("your Age is " + ageAfter10years);
+	}
+	public static void Main()
+	{
+		Console.WriteLine("Day 3 Methods and user input");
+		Console.Write("Enter the Name ");
+	    string userName = Console.ReadLine();
+		Console.Write("Enter the age ");
+		int userAge = Convert.ToInt32(Console.ReadLine());
+		Console.Write("Enter the city ");
+		string userCity = Console.ReadLine();
+		ShowDetails(userName,userAge,userCity);
+		Console.WriteLine("Day 3 task completed");
+		}
+}
