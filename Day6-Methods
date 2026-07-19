@@ -1,0 +1,45 @@
+using System;
+
+public class Payrollsystem 
+{
+	public static double  Calculatebonus(double salary,double percentage)
+	{
+		double bonus = salary * (percentage/100);
+		return bonus;
+	}
+	public static double Calculatetax(double salary)
+	{
+		double tax = salary * 0.18;
+		return tax;
+	}
+	public static double Calculatenetsalary(double salary,double bonus, double tax)
+	{ 
+		return salary + bonus - tax;
+	}
+	public static void Main()
+	{ 
+		Console.WriteLine("Day 7 methods start here");
+		
+		//Calcultae bonus
+		double emp01bonus = Calculatebonus(50000,10);
+		double emp02bonus = Calculatebonus(75000,15);
+		double emp03bonus = Calculatebonus(10000,5);
+		double emp04bonus = Calculatebonus(100000,20);
+		
+		//calculate Tax
+		double emp01tax = Calculatetax(5000);
+		
+		Console.WriteLine("Employee 01bonus : $ " + emp01bonus );
+		Console.WriteLine("Employee 02bonus : $ " + emp02bonus );
+		Console.WriteLine("Employee 03bonus : $ " + emp03bonus );
+		Console.WriteLine("Employee 04bonus : $ " + emp04bonus );
+		
+		double emp01netsalary = Calculatenetsalary(5000, emp01bonus,emp01tax);
+		
+		
+		Console.WriteLine("Employee 01tax : " + emp01tax);
+		Console.WriteLine("Employee 01netsalary : " + emp01netsalary);
+	}
+	
+}
+
